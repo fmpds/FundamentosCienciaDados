@@ -19,3 +19,4 @@ dens =  kde((p[:,1]))
 plot(dens.x, dens.density, title = "Parameters estimator", label = "")
 xlabel!("lambda")
 
+# autor: Felipe Marcelo

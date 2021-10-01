@@ -21,3 +21,5 @@ dens =  kde((p[:,1], p[:,2]))
 plot(dens.x, dens.y, dens.density, title = "Parameters estimator")
 ylabel!("b")
 xlabel!("a")
+
+# autor: Felipe Marcelo
