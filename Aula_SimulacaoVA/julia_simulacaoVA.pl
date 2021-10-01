@@ -11,7 +11,7 @@
 end
 
 
-# Atividade
+# Atividade - Normal Distribution
 
 @time begin
 	# create zeros array
