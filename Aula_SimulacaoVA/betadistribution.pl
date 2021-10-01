@@ -1,7 +1,7 @@
 using StatsPlots 
 using Distribution
 
-# matrix para armazenar estimadores a e b durante amostragem 
+# matriz para armazenar estimadores a e b durante amostragem 
 p = zeros(1000, 2)
 for i in 1:1000
 	x = zeros(0)
