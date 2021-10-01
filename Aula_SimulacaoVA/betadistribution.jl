@@ -22,4 +22,4 @@ plot(dens.x, dens.y, dens.density, title = "Parameters estimator")
 ylabel!("b")
 xlabel!("a")
 
-# autor: Felipe Marcelo
+# autor: Felipe Marcelo.

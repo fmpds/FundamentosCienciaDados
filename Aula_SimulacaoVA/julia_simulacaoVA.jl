@@ -29,7 +29,7 @@ histogram(p, title = "Histogram of p", label = "")
 xlabel!("p")
 ylabel!("frequency")
 
-# autor: Felipe Marcelo
+# autor: Felipe Marcelo.
 
 
 
