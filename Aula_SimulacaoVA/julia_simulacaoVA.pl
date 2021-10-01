@@ -19,10 +19,10 @@ end
 	for i in 1:1000
 		x = zeros(0)
 		for j in 1:100
-			append!(x, )
-	
-end
-	#end
+			append!(x, rand(Normal(0, 1), 100))
+			p[i] = sum(x) / size(x)[1]
+		end
+	end
 end	
 
 histogram(p, title = "Histogram of p", label = "")
@@ -31,28 +31,6 @@ ylabel!("frequency")
 
 
 
-using StatsPlots 
-using Distribution
-
-# matrix para armazenar estimadores a e b durantes amostragem 
-p = zeros(1000, 1)
-for i in 1:1000
-	x = zeros(0)
-	for j in 1:100
-    		append!(x, rand(Poisson(10), 100))
-		# calculando estimadores com maximum likelihood estimator (mle)
-    		estimator = fit_mle(Poisson, x)
-		# adicionando par de parametros para amostra j na linha da matrix de zeros p
-    		p[i,:] .= params(estimator)
-	end
-end
-
-# calculando densidade kernel density estimator
-dens =  kde((p[:,1]))
-
-plot(dens.x, dens.density, title = "Parameters estimator")
-ylabel!("b")
-xlabel!("a")
 
 
 
