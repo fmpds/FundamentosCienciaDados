@@ -19,6 +19,10 @@ end
 # calculando densidade kernel density estimator
 dens =  kde((p[:,1], p[:,2]))
 
-plot(dens.x, dens.y, dens.density, title = "Parameters estimator")
-ylabel!("b")
-xlabel!("a")
+figure = plot(dens.x, dens.y, dens.density, title = "Parameters estimator")
+figure = ylabel!("b")
+figure = xlabel!("a")
+
+png(figure)
+
+# autor: Felipe Marcelo

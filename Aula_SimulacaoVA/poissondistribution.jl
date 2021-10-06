@@ -1,5 +1,5 @@
 using StatsPlots 
-using Distribution
+using Distributions
 using KernelDensity
 
 # matrix para armazenar estimador lambda durantes amostragem 
@@ -16,7 +16,9 @@ end
 # calculando densidade kernel density estimator
 dens =  kde((p[:,1]))
 
-plot(dens.x, dens.density, title = "Parameters estimator", label = "")
-xlabel!("lambda")
+figure = plot(dens.x, dens.density, title = "Parameters estimator", label = "")
+figure = xlabel!("lambda")
+
+png(figure, "poisson")
 
 # autor: Felipe Marcelo.

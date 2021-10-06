@@ -1,5 +1,6 @@
 using StatsPlots 
-using Distribution
+using Distributions
+using Kerneldensity
 
 # matriz para armazenar estimadores a e b durante amostragem 
 p = zeros(1000, 2)
@@ -18,8 +19,10 @@ end
 # calculando densidade kernel density estimator
 dens =  kde((p[:,1], p[:,2]))
 
-plot(dens.x, dens.y, dens.density, title = "Parameters estimator")
-ylabel!("b")
-xlabel!("a")
+figure = plot(dens.x, dens.y, dens.density, title = "Parameters estimator")
+figure = ylabel!("b")
+figure = xlabel!("a")
 
-# autor: Felipe Marcelo.
+png(figure)
+
+# autor: Felipe Marcelo
